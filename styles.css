@@ -1,0 +1,86 @@
+.clock {
+  width: 600px;
+  height: 600px;
+  background-color: burlywood;
+  border-radius: 50%;
+  border: 1px solid gray;
+  position: relative;
+}
+
+.clock .number {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  --rotation: O;
+  transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+  --rotation: 30deg;
+}
+.clock .number2 {
+  --rotation: 60deg;
+}
+.clock .number3 {
+  --rotation: 90deg;
+}
+.clock .number4 {
+  --rotation: 120deg;
+}
+.clock .number5 {
+  --rotation: 150deg;
+}
+.clock .number6 {
+  --rotation: 180deg;
+}
+.clock .number7 {
+  --rotation: 210deg;
+}
+.clock .number8 {
+  --rotation: 240deg;
+}
+.clock .number9 {
+  --rotation: 270deg;
+}
+.clock .number10 {
+  --rotation: 300deg;
+}
+.clock .number11 {
+  --rotation: 330deg;
+}
+
+.clock .line {
+  --rotation: 30;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+}
+
+.clock .line.hours {
+  height: 30%;
+  width: 10px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.clock .line.minutes {
+  height: 35%;
+  width: 8px;
+  border-top-left-radius: 4;
+  border-top-right-radius: 4;
+}
+
+.clock .line.seconds {
+  height: 40%;
+  width: 6px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: red;
+}
